@@ -24,13 +24,13 @@ app.get("", (req, res) => {
 });
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "hello from about ",
+    title: "About",
     name: "ali hashem",
   });
 });
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "hello from help ",
+    title: "Help",
     name: "ali hashem",
   });
 });
