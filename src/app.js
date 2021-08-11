@@ -5,6 +5,7 @@ const path = require("path");
 const app = express();
 const hbs = require("hbs");
 const { response } = require("express");
+const port = process.env.PORT || 3000;
 //define paths to hbs configs
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsDirectory = path.join(__dirname, "../templates/views");
@@ -89,6 +90,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("app started");
+app.listen(port, () => {
+  console.log("app started at port :"+port);
 });
