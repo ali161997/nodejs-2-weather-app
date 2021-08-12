@@ -62,7 +62,7 @@ app.get("/weather", (req, res) => {
         })
       }
       console.log(data)
-      let forcast = `${data.weather[0].description} ,temp :${data.main.temp} ,pressure :${data.main.pressure} ,humidity :${data.main.humidity}`;
+      let forcast = `${data.weather[0].description} ,temp :${data.main.temp} ,pressure :${data.main.pressure} ,humidity :${data.main.humidity} ,wind speed :${data.wind.speed} ,wind degree :${data.wind.deg}`;
       let location = `${data.sys.country}/${data.name} `
       res.send({
         address: req.query.address,
@@ -91,5 +91,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("app started at port :"+port);
+  console.log("app started at port :" + port);
 });
